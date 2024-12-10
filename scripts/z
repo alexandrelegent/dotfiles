@@ -1,0 +1,71 @@
+#!/usr/bin/env python3
+
+import argparse
+import os
+import subprocess
+import sys
+
+
+def main():
+    try:
+        parser = argparse.ArgumentParser(description="Autojump in a Zellij session")
+        parser.add_argument(
+            "parts",
+            nargs="*",
+            metavar="PART",
+            type=str,
+            help="names (or subsets) of the session to jump to",
+        )
+        args = parser.parse_args()
+
+        # Check that every necessary command are present on the system
+        subprocess.run("command -v sk", shell=True, check=True, capture_output=True)
+        subprocess.run("command -v zoxide", shell=True, check=True, capture_output=True)
+        subprocess.run("command -v zellij", shell=True, check=True, capture_output=True)
+
+        # Check if we are already in a zellij session
+        # If that the case, we issue an error to avoid multiple, embedded, sessions
+        if os.environ.get("ZELLIJ") is not None:
+            print(f"error: you're already attach to a zellij session", file=sys.stderr)
+            sys.exit(1)
+
+        # Query zoxide to retrieve the path
+        # If not args is passed, an interactive selection will begin
+        path = ""
+        if not args.parts:
+            path = subprocess.check_output(
+                "zoxide query -l | sk --reverse", shell=True
+            ).rstrip()
+        else:
+            parts = " ".join(args.parts)
+            path = subprocess.check_output(f"zoxide query {parts}", shell=True).rstrip()
+
+        # Check if a path has been defined, otherwise exit
+        # The reason the path can still be empty is because the user can quit early the selection
+        # with sk by pressing ESC
+        if path == "":
+            sys.exit(0)
+
+        # Increment zoxide score for this path
+        subprocess.run(f"zoxide add {path.decode()}", shell=True, check=True)
+
+        # Retrieve the name of the directory, which will be the name of the zellij session
+        name = os.path.basename(path).lstrip(b".").decode()
+
+        # Launch a new zellij (or attach to the previously opened one), at the correct path
+        # TODO having multiple directory call the same will result in attaching to an already
+        # open session, when we really want to open a new one.
+        # You should maybe find an unique identifier to append to session name, such as path from
+        # home, or a sha of the complete path ...
+        subprocess.run(
+            f"zellij attach --create {name}", cwd=path, shell=True, check=True
+        )
+
+    except subprocess.CalledProcessError:
+        sys.exit(1)
+    except KeyboardInterrupt:
+        sys.exit()
+
+
+if __name__ == "__main__":
+    main()

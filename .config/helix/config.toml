@@ -1,0 +1,9 @@
+theme = "github_dark"
+
+[editor]
+true-color = true
+line-number = "relative"
+rulers = [100]
+
+[editor.cursor-shape]
+insert = "bar"
