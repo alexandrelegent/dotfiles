@@ -1,4 +1,24 @@
+[language-server.typos]
+command = "typos-lsp"
+
 [[languages]]
 name = "rust"
-language-server = { command = "rustup", args = ["run", "stable", "rust-analyzer"] }
-config = { check = { command = "clippy" } }
+auto-format = true
+language-server = ["rust-analyzer", "typos"]
+
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
+[[language]]
+name = "toml"
+auto-format = true
+formatter = { command = "taplo", args = ["format", "-"] }
+language-servers = ["taplo", "typos"]
+
+[[language]]
+name = "protobuf"
+language-servers = ["buf", "pbkit", "typos"]
+
+[language-server.buf]
+command = "buf"
+args = ["beta", "lsp", "--timeout=0", "--log-format=text"]
