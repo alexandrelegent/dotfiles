@@ -4,6 +4,10 @@ theme = "github_dark"
 true-color = true
 line-number = "relative"
 rulers = [100]
+end-of-line-diagnostics = "hint"
 
 [editor.cursor-shape]
 insert = "bar"
+
+[editor.inline-diagnostics]
+cursor-line = "error"
