@@ -17,6 +17,7 @@ language-servers = ["taplo", "typos"]
 
 [[language]]
 name = "protobuf"
+auto-format = true
 language-servers = ["buf", "pbkit", "typos"]
 
 [language-server.buf]
@@ -25,8 +26,13 @@ args = ["beta", "lsp", "--timeout=0", "--log-format=text"]
 
 [[language]]
 name = "gdscript"
+auto-format = true
 language-servers = ["godot", "typos"]
 
 [language-server.godot]
 command = "nc"
 args = ["127.0.0.1", "6005"]
+
+[[language]]
+name = "swift"
+language-servers = ["sourcekit-lsp", "typos"]

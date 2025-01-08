@@ -28,6 +28,7 @@ brew "pyright"
 brew "ripgrep"
 brew "sk"
 brew "stow"
+brew "swift-format"
 brew "taplo"
 brew "trash", link: true
 brew "typos-lsp"
