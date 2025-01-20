@@ -23,6 +23,7 @@ export VISUAL="hx"
 export SSH_KEY_PATH="$HOME/.ssh/id_ed25519"
 export HOMEBREW_NO_ANALYTICS=1
 export DOTNET_CLI_TELEMETRY_OPTOUT=true
+export TERM=xterm-256color
 
 # Paths
 
