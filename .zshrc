@@ -60,7 +60,7 @@ if [ "$(command -v eza)" ]; then
 fi
 
 if [ "$(command -v trash)" ]; then
-  alias cat="trash"
+  alias rm="trash"
 fi
 
 # SSH Agent
