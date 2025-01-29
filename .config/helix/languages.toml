@@ -36,3 +36,7 @@ args = ["127.0.0.1", "6005"]
 [[language]]
 name = "swift"
 language-servers = ["sourcekit-lsp", "typos"]
+
+[[language]]
+name = "ruby"
+language-servers = ["solargraph", "typos"]
