@@ -63,6 +63,10 @@ if [ "$(command -v trash)" ]; then
   alias rm="trash"
 fi
 
+if [ "$(command -v lazygit)" ]; then
+  alias lg="lazygit"
+fi
+
 # SSH Agent
 
 if [ -x "$(command -v ssh-add)" ]; then
