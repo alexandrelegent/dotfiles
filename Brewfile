@@ -31,6 +31,7 @@ brew "stow"
 brew "swift-format"
 brew "taplo"
 brew "trash", link: true
+brew "typescript-language-server"
 brew "typos-lsp"
 brew "unzip"
 brew "vscode-langservers-extracted"
