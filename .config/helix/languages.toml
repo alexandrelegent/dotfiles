@@ -16,6 +16,11 @@ formatter = { command = "taplo", args = ["format", "-"] }
 language-servers = ["taplo", "typos"]
 
 [[language]]
+name = "go"
+auto-format = true
+language-servers = ["gopls", "golangci-lint-lsp", "typos"]
+
+[[language]]
 name = "protobuf"
 auto-format = true
 language-servers = ["buf", "pbkit", "typos"]
