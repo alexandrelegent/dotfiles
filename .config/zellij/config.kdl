@@ -4,6 +4,7 @@ session_serialization false
 pane_frames false
 default_shell "zsh"
 default_layout "compact_top"
+show_startup_tips false
 
 keybinds {
 	locked {
