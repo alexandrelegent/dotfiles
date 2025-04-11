@@ -42,6 +42,7 @@ brew "typos-lsp"
 brew "unzip"
 brew "vscode-langservers-extracted"
 brew "yaml-language-server"
+brew "yt-dlp"
 brew "zellij"
 brew "zoxide"
 brew "bufbuild/buf/buf"
@@ -70,6 +71,7 @@ cask "vagrant"
 cask "vlc"
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
+mas "Infuse", id: 1136220934
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
