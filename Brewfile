@@ -67,6 +67,7 @@ cask "signal"
 cask "sony-ps-remote-play"
 cask "steam"
 cask "temurin"
+cask "transmission"
 cask "vagrant"
 cask "vlc"
 mas "GarageBand", id: 682658836
