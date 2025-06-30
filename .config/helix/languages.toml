@@ -57,4 +57,24 @@ language-servers = ["solargraph", "typos"]
 
 [[language]]
 name = "yaml"
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "yaml"] }
 language-servers = ["yaml-language-server", "ansible-language-server", "typos"]
+
+[[language]]
+name = "html"
+auto-format = true
+formatter = { command = 'prettier', args = ["--parser", "html"] }
+language-servers = ["vscode-html-language-server", "superhtml", "typos"]
+
+[[language]]
+name = "css"
+auto-format = true
+language-servers = ["vscode-css-language-server", "typos"]
+formatter = { command = 'prettier', args = ["--parser", "css"] }
+
+[[language]]
+name = "scss"
+auto-format = true
+language-servers = ["vscode-css-language-server", "typos"]
+formatter = { command = 'prettier', args = ["--parser", "scss"] }
