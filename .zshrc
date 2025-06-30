@@ -36,6 +36,9 @@ export PATH="$HOME/.dotfiles/scripts:$PATH"
 if [ "$(command -v atuin)" ]; then
   eval "$(atuin init zsh)"
 fi
+if [ "$(command -v fuck)" ]; then
+  eval $(thefuck --alias)
+fi
 
 if [ "$(command -v mise)" ]; then
   eval "$(mise activate zsh)"
