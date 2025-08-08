@@ -1,13 +1,14 @@
 [language-server.typos]
 command = "typos-lsp"
 
-[[languages]]
+[[language]]
 name = "rust"
 auto-format = true
-language-server = ["rust-analyzer", "typos"]
+language-servers = ["rust-analyzer", "typos"]
 
-[language-server.rust-analyzer.config.check]
-command = "clippy"
+[language-server.rust-analyzer.config]
+check.command = "clippy"
+imports.granularity.group = "module"
 
 [[language]]
 name = "toml"
@@ -19,15 +20,6 @@ language-servers = ["taplo", "typos"]
 name = "go"
 auto-format = true
 language-servers = ["gopls", "golangci-lint-lsp", "typos"]
-
-[language-server.golangci-lint-lsp.config]
-command = [
-  "golangci-lint",
-  "run",
-  "--output.json.path=stdout",
-  "--show-stats=false",
-  "--issues-exit-code=1",
-]
 
 [[language]]
 name = "protobuf"

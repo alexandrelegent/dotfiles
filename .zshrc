@@ -29,6 +29,7 @@ export TERM=xterm-256color
 
 export PATH="/opt/homebrew/sbin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export PATH="$HOME/.dotfiles/scripts:$PATH"
 
 # Command Completion
