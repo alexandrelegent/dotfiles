@@ -53,6 +53,7 @@ fi
 
 alias ll="ls -l"
 alias la="ls -la"
+alias cl="clear"
 
 if [ "$(command -v bat)" ]; then
   alias cat="bat"
