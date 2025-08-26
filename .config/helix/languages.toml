@@ -4,7 +4,7 @@ command = "typos-lsp"
 [[language]]
 name = "rust"
 auto-format = true
-language-servers = ["rust-analyzer", "typos"]
+language-servers = ["typos", "rust-analyzer"]
 
 [language-server.rust-analyzer.config]
 check.command = "clippy"
@@ -14,17 +14,17 @@ imports.granularity.group = "module"
 name = "toml"
 auto-format = true
 formatter = { command = "taplo", args = ["format", "-"] }
-language-servers = ["taplo", "typos"]
+language-servers = ["typos", "taplo"]
 
 [[language]]
 name = "go"
 auto-format = true
-language-servers = ["gopls", "golangci-lint-lsp", "typos"]
+language-servers = ["typos", "gopls", "golangci-lint-lsp"]
 
 [[language]]
 name = "protobuf"
 auto-format = true
-language-servers = ["buf", "pbkit", "typos"]
+language-servers = ["typos", "buf", "pbkit"]
 
 [language-server.buf]
 command = "buf"
@@ -33,7 +33,7 @@ args = ["beta", "lsp", "--timeout=0", "--log-format=text"]
 [[language]]
 name = "gdscript"
 auto-format = true
-language-servers = ["godot", "typos"]
+language-servers = ["typos", "godot"]
 
 [language-server.godot]
 command = "nc"
@@ -41,32 +41,32 @@ args = ["127.0.0.1", "6005"]
 
 [[language]]
 name = "swift"
-language-servers = ["sourcekit-lsp", "typos"]
+language-servers = ["typos", "sourcekit-lsp"]
 
 [[language]]
 name = "ruby"
-language-servers = ["solargraph", "typos"]
+language-servers = ["typos", "solargraph"]
 
 [[language]]
 name = "yaml"
 auto-format = true
 formatter = { command = "prettier", args = ["--parser", "yaml"] }
-language-servers = ["yaml-language-server", "ansible-language-server", "typos"]
+language-servers = ["typos", "yaml-language-server", "ansible-language-server"]
 
 [[language]]
 name = "html"
 auto-format = true
 formatter = { command = 'prettier', args = ["--parser", "html"] }
-language-servers = ["vscode-html-language-server", "superhtml", "typos"]
+language-servers = ["typos", "vscode-html-language-server", "superhtml"]
 
 [[language]]
 name = "css"
 auto-format = true
-language-servers = ["vscode-css-language-server", "typos"]
+language-servers = ["typos", "vscode-css-language-server"]
 formatter = { command = 'prettier', args = ["--parser", "css"] }
 
 [[language]]
 name = "scss"
 auto-format = true
-language-servers = ["vscode-css-language-server", "typos"]
+language-servers = ["typos", "vscode-css-language-server"]
 formatter = { command = 'prettier', args = ["--parser", "scss"] }
