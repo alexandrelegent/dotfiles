@@ -3,7 +3,7 @@
 .define window_focus   : yabai -m window --focus {{1}} || yabai -m space --focus {{2}}
 .define window_swap    : yabai -m window --swap {{1}} || (yabai -m window --display {{1}} && yabai -m display --focus {{1}})
 .define space_focus    : yabai -m space --focus prev || yabai -m space --focus last
-.define display_focuse : yabai -m display --focus {{1}}
+.define display_focus  : yabai -m display --focus {{1}}
 .define send_to_space  : yabai -m window --space {{1}} --focus
 .define switch_space   : yabai -m space --focus {{1}}
 .define resize_window  : yabai -m window --resize {{1}}:{{2}}:{{3}}
@@ -17,8 +17,6 @@ ctrl - right : @window_focus("east", "next")
 
 ctrl - j     : @display_focus("east")
 ctrl - k     : @display_focus("west")
-ctrl - down  : @display_focus("east")
-ctrl - up    : @display_focus("west")
 
 ctrl - 1 : @switch_space("1")
 ctrl - 2 : @switch_space("2")
@@ -29,6 +27,10 @@ ctrl - 6 : @switch_space("6")
 ctrl - 7 : @switch_space("7")
 ctrl - 8 : @switch_space("8")
 ctrl - 9 : @switch_space("9")
+
+# Create / Remove spaces
+cmd + ctrl - 0x3d : yabai -m space --create
+cmd + ctrl - 0x2d : yabai -m space --destroy
 
 # Swap window
 cmd + ctrl - h : @window_swap("west")
