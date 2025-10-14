@@ -15,8 +15,8 @@ ctrl - l : @window_focus("east", "next")
 ctrl - left  : @window_focus("west", "prev")
 ctrl - right : @window_focus("east", "next")
 
-ctrl - j     : @display_focus("east")
-ctrl - k     : @display_focus("west")
+ctrl - j : @display_focus("east")
+ctrl - k : @display_focus("west")
 
 ctrl - 1 : @switch_space("1")
 ctrl - 2 : @switch_space("2")
