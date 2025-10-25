@@ -70,3 +70,11 @@ name = "scss"
 auto-format = true
 language-servers = ["typos", "vscode-css-language-server"]
 formatter = { command = 'prettier', args = ["--parser", "scss"] }
+
+[[language]]
+name = "python"
+language-servers = ["typos", "pyright", "ruff"]
+
+[language-server.ruff]
+command = "ruff-lsp"
+config = { settings = { args = ["--ignore", "E501"] } }
