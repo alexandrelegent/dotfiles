@@ -1,0 +1,8 @@
+#:schema https://jj-vcs.github.io/jj/latest/config-schema.json
+
+[user]
+name = "Alexandre Legent"
+email = "alexandrelegent@gmail.com"
+
+[ui]
+default-command = ["log", "--no-pager"]
