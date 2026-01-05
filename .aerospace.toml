@@ -45,7 +45,7 @@ automatically-unhide-macos-hidden-apps = true
 # even when they are invisible.
 # This config version is only available since 'config-version = 2'
 # Fallback value (if you omit the key): persistent-workspaces = []
-persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 
 # A callback that runs every time binding mode changes
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -72,6 +72,18 @@ outer.left = 8
 outer.bottom = 8
 outer.top = 8
 outer.right = 8
+
+[workspace-to-monitor-force-assignment]
+1 = 'main'
+2 = 'main'
+3 = 'main'
+4 = 'main'
+5 = 'main'
+6 = 'main'
+7 = 'main'
+8 = 'main'
+9 = 'main'
+0 = '^built-in retina display$'
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -137,7 +149,7 @@ cmd-6 = 'workspace 6'
 cmd-7 = 'workspace 7'
 cmd-8 = 'workspace 8'
 cmd-9 = 'workspace 9'
-cmd-0 = 'workspace 10'
+cmd-0 = 'workspace 0'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 cmd-shift-1 = 'move-node-to-workspace 1'
@@ -149,7 +161,7 @@ cmd-shift-6 = 'move-node-to-workspace 6'
 cmd-shift-7 = 'move-node-to-workspace 7'
 cmd-shift-8 = 'move-node-to-workspace 8'
 cmd-shift-9 = 'move-node-to-workspace 9'
-cmd-shift-0 = 'move-node-to-workspace 10'
+cmd-shift-0 = 'move-node-to-workspace 0'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 cmd-tab = 'workspace-back-and-forth'
