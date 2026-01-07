@@ -22,6 +22,19 @@ auto-format = true
 language-servers = ["typos", "gopls", "golangci-lint-lsp"]
 
 [[language]]
+name = "dockerfile"
+auto-format = true
+language-servers = ["typos", "docker-langserver"]
+
+[language-server.docker-langserver]
+command = "docker-language-server"
+
+[[language]]
+name = "docker-compose"
+auto-format = true
+language-servers = ["typos", "docker-compose-langserver"]
+
+[[language]]
 name = "protobuf"
 auto-format = true
 language-servers = ["typos", "buf", "pbkit"]
