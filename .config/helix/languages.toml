@@ -33,6 +33,7 @@ command = "docker-language-server"
 name = "docker-compose"
 auto-format = true
 language-servers = ["typos", "docker-compose-langserver"]
+formatter = { command = "prettier", args = ["--parser", "yaml"] }
 
 [[language]]
 name = "protobuf"
@@ -91,3 +92,18 @@ language-servers = ["typos", "pyright", "ruff"]
 [language-server.ruff]
 command = "ruff-lsp"
 config = { settings = { args = ["--ignore", "E501"] } }
+
+[[language]]
+name = "markdown"
+auto-format = true
+language-servers = ["typos", "marksman", "markdown-oxide", "rumdl"]
+
+[[language]]
+name = "git-commit"
+auto-format = true
+language-servers = ["typos", "commit-lsp"]
+
+[[language]]
+name = "jjdescription"
+auto-format = true
+language-servers = ["typos", "commit-lsp"]
