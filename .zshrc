@@ -29,7 +29,7 @@ export TERM=xterm-256color
 
 export PATH="/opt/homebrew/sbin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
-export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export PATH="/opt/homebrew/opt/lldb/bin:$PATH"
 export PATH="$HOME/.dotfiles/scripts:$PATH"
 
 # Command Completion
@@ -70,6 +70,10 @@ fi
 
 if [ "$(command -v lazygit)" ]; then
   alias lg="lazygit"
+fi
+
+if [ "$(command -v kubectl)" ]; then
+  alias k="kubectl"
 fi
 
 # SSH Agent
